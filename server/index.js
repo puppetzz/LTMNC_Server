@@ -14,10 +14,7 @@ const MONGO_URI = 'mongodb+srv://ltm:khA8NIwPTX165yMc@ltm.e0pdzky.mongodb.net/?r
 
 app.use(express.json());
 app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
+  cors()
 );
 
 app.use(
