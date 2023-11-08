@@ -13,9 +13,8 @@ RUN apk add --update redis && \
 
 ADD package*.json ./
 RUN npm install 
-COPY . .
+ADD . .
 
-EXPOSE 5000
 
 CMD ["npx", "nodemon", "index"];
 # CMD ["npm", "start"]
