@@ -44,6 +44,10 @@ app.use("/api/code", require("./routes/codeRoutes"));
 app.use("/api/problem", require("./routes/problemRoutes"));
 app.use("/api/auth", require("./routes/authRoutes"));
 
+app.get('/', (req, res) => {
+  res.send('APP IS RUNNING')
+})
+
 app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
