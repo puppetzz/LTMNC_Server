@@ -13,9 +13,11 @@ require("./config/passport")(passport);
 const MONGO_URI = 'mongodb+srv://ltm:khA8NIwPTX165yMc@ltm.e0pdzky.mongodb.net/?retryWrites=true&w=majority';
 
 app.use(express.json());
-app.use(
-  cors()
-);
+app.use(cors({
+  origin: true,
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+}));
 
 app.use(
   session({
