@@ -56,7 +56,7 @@ app.get(
     failureRedirect: "/failed",
   }),
   (req, res) => {
-    res.redirect("http://localhost:3000/");
+    res.redirect("https://ltm-fe.vercel.app");
   }
 );
 
